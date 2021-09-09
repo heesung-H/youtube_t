@@ -1,5 +1,6 @@
 import React from 'react';
-import SearchBar from '../content/searchBar';
+import SearchBar from '../content/header/search_bar/searchBar';
+
 
 const Head = ({onSearch}) => {
 
