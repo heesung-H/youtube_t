@@ -3,7 +3,6 @@ import styles from './contentItem.module.css';
 
 const ContentItem = ({video, video: {snippet}, onVideoClick, display}) => {
     const displayType = display === 'list' ? styles.list : styles.grid;
-    console.log(displayType);
     
     return (
         <li className={`${styles.container} ${displayType}`} onClick={()=> onVideoClick(video)}>

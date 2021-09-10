@@ -13,12 +13,13 @@
   }
   
   .input {
-    flex-basis: 100%;
+    flex-basis: 75%;
     font-size: 1.2rem;
     outline: 0;
   }
   
   .button {
+    margin-left: 1em;
     background-color: darkgrey;
     outline: 0;
   }
@@ -28,3 +29,6 @@
     padding: 0.5em 0.2em;
   }
   
+  .title {
+    margin-left: 0.5em;
+  }

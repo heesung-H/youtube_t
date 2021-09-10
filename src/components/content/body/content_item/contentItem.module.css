@@ -3,7 +3,7 @@
 }
 
 .container.grid {
-  width: 50%;
+  width: 100%;
 }
 
 .container.list {
@@ -42,4 +42,10 @@
 
 .channel {
   font-size: 0.6rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .container.grid {
+    width: 50%;
+  }
 }

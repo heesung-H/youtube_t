@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import styles from './app.module.css';
 import Body from './components/config/body';
 import Head from './components/config/head';
@@ -12,20 +12,20 @@ function App({youtube}) {
     setSelectedVideo(video);
   };
 
-  const searchHandle = (query) => {
+  const searchHandle = useCallback(query => {
     youtube
     .search(query)
     .then(videos => setVideos(videos));
 
     //검색시 초기화
     setSelectedVideo(null);
-  }
+  }, [youtube]);
 
   useEffect(() => {
     youtube
     .mostPopular()
     .then(videos => setVideos(videos))
-  }, []);
+  }, [youtube]);
 
   return (
     <>

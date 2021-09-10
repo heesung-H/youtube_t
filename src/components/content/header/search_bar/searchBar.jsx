@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './searchBar.module.css';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = memo(
+  ({ onSearch }) => {
     const inputRef = useRef();
     const handleSearch = () => {
       const value = inputRef.current.value;
@@ -20,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
       <header className={styles.header}>
         <div className={styles.logo}>
           <img className={styles.img} src="/images/logo.png" alt="logo" />
-          <h1 className={styles.title}>Youtube</h1>
+          <h1 className={styles.title}>Youtube-T</h1>
         </div>
         <input
           ref={inputRef}
@@ -38,6 +39,7 @@ const SearchBar = ({ onSearch }) => {
         </button>
       </header>
     );
-  };
+  }
+)
 
 export default SearchBar;
