@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './contentItem.module.css';
 
 const ContentItem = ({video, video: {snippet}, onVideoClick, display}) => {
-    const displayType = display === 'list' ? styles.list : styles.grid;
+    const displayType = display === 'grid' ? styles.grid : styles.list;
     
     return (
         <li className={`${styles.container} ${displayType}`} onClick={()=> onVideoClick(video)}>

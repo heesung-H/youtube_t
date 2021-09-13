@@ -3,11 +3,12 @@ import styles from './app.module.css';
 import Body from './components/config/body';
 import Head from './components/config/head';
 
+//React ver-Hoot's
 function App({youtube}) {
 
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
+  
   const selectVideo = video => {
     setSelectedVideo(video);
   };
